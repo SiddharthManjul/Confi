@@ -18,3 +18,12 @@ const delegatorSmartAccount = await toMetaMaskSmartAccount({
   signer: { account: delegatorAccount },
 })
 
+const delegateAccount = privateKeyToAccount("0x...")
+
+const delegateSmartAccount = await toMetaMaskSmartAccount({
+  client: publicClient,
+  implementation: Implementation.Hybrid, // Hybrid smart account
+  deployParams: [delegateAccount.address, [], [], []],
+  deploySalt: "0x",
+  signer: { account: delegateAccount },
+})
