@@ -27,3 +27,6 @@ const delegateSmartAccount = await toMetaMaskSmartAccount({
   deploySalt: "0x",
   signer: { account: delegateAccount },
 })
+
+console.log("Delegator Smart Account Address:", delegatorSmartAccount.address)
+console.log("Delegate Smart Account Address:", delegateSmartAccount.address)
