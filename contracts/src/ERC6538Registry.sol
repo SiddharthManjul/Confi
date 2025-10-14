@@ -82,7 +82,7 @@ contract ERC6538Registry {
       dataHash = keccak256(
         abi.encodePacked(
           "\x19\x01",
-          DOMAIN_SEPARATOR(),
+          domainSeparator(),
           keccak256(
             abi.encode(
               ERC6538REGISTRY_ENTRY_TYPE_HASH,
@@ -131,7 +131,7 @@ contract ERC6538Registry {
 
   /// @notice Returns the domain separator used in this contract.
   /// @dev The domain separator is re-computed if there's a chain fork.
-  function DOMAIN_SEPARATOR() public view returns (bytes32) {
+  function domainSeparator() public view returns (bytes32) {
     return block.chainid == INITIAL_CHAIN_ID ? INITIAL_DOMAIN_SEPARATOR : _computeDomainSeparator();
   }
 

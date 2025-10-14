@@ -52,7 +52,7 @@ interface IERC6538Registry {
   function incrementNonce() external;
 
   /// @notice Returns the domain separator used in this contract.
-  function DOMAIN_SEPARATOR() external view returns (bytes32);
+  function domainSeparator() external view returns (bytes32);
 
   /// @notice Returns the stealth meta-address for the given `registrant` and `schemeId`.
   function stealthMetaAddressOf(address registrant, uint256 schemeId)
@@ -61,7 +61,7 @@ interface IERC6538Registry {
     returns (bytes memory);
 
   /// @notice Returns the EIP-712 type hash used in `registerKeysOnBehalf`.
-  function ERC6538REGISTRY_ENTRY_TYPE_HASH() external view returns (bytes32);
+  function erc6538RegistryEntryTypeHash() external view returns (bytes32);
 
   /// @notice Returns the nonce of the given `registrant`.
   function nonceOf(address registrant) external view returns (uint256);
