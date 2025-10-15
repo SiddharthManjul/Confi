@@ -1,5 +1,6 @@
 import { JsonRpcProvider, Wallet } from "ethers";
 import { TEST_MNEMONIC, TEST_RPC_URL } from "../utils/constants";
+import LevelDB from "level-js";
 
 /**
  * Creates and returns a provider and wallet for JSON-RPC interactions.
@@ -24,4 +25,11 @@ export const getProviderWallet = () => {
     provider,
     wallet,
   };
+};
+
+export const createWebDatabase = (dbLocationPath: string) => {
+  indexedDB.databases;
+  console.log("Creating local database at path: ", dbLocationPath);
+  const db = new LevelDB(dbLocationPath);
+  return db;
 };

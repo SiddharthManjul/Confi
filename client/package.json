@@ -22,8 +22,10 @@
   "dependencies": {
     "@metamask/delegation-toolkit": "^0.13.0",
     "@railgun-community/shared-models": "^8.0.0",
+    "@types/level-js": "^4.0.5",
     "dotenv": "^17.2.3",
     "ethers": "^6.15.0",
+    "level-js": "^6.1.0",
     "viem": "^2.38.0"
   }
 }
